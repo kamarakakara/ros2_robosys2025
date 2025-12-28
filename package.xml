@@ -6,6 +6,8 @@
   <description>for assignment of robosys2025</description>
   <maintainer email="kamarakakara@gmail.com">kamarakakara</maintainer>
   <license>BSD-3-Clause</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

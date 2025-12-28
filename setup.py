@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'talker = ros2_robosys2025.talker:main',
+            'listener = ros2_robosys2025.listener:main'
         ],
     },
 )
