@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: build and test
         run: |
-          rsync -av ./ /root/ros2_ws/src/mypkg/
+          rsync -av ./ /root/ros2_ws/src/ros2_robosys2025/
           cd /root/ros2_ws
           bash -xv ./src/ros2_robosys2025/test/test.bash /root
