@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-#SPDX-FileCopyrightText: 2025 Kamarakakara
-#SPDX-License-Identifier: BSD-3-Clause
 
 import rclpy
 from rclpy.node import Node
@@ -12,20 +10,18 @@ is_warning = False
 latest_usage = None
 has_printed_initial = False
 
-
 def callback(msg):
     global is_warning, latest_usage
 
     latest_usage = msg.data
 
     if latest_usage > WARNING_THRESHOLD and not is_warning:
-        print("Usage rate exceeds 80%")
+        print("Usage rate exceeds 80%", flush=True)
         is_warning = True
 
     elif latest_usage <= WARNING_THRESHOLD and is_warning:
-        print(f"Usage rate below 80%")
+        print(f"Usage rate below 80%", flush=True)
         is_warning = False
-
 
 def main():
     global has_printed_initial
@@ -45,16 +41,17 @@ def main():
     try:
         while rclpy.ok():
             rclpy.spin_once(node, timeout_sec=1.0)
-
             now = time.time()
 
+            # 起動時出力
             if latest_usage is not None and not has_printed_initial:
-                print(f"Current usage : {latest_usage:.2f}%")
+                print(f"Current usage : {latest_usage:.2f}%", flush=True)
                 has_printed_initial = True
                 last_print_time = now
 
+            # 30秒ごとの定期出力
             elif latest_usage is not None and (now - last_print_time) >= 30.0:
-                print(f"Current usage : {latest_usage:.2f}%")
+                print(f"Current usage : {latest_usage:.2f}%", flush=True)
                 last_print_time = now
 
     except KeyboardInterrupt:
