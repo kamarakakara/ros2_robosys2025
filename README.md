@@ -24,10 +24,10 @@ Current usage : 10.60%
 ```
  
 ## ノード一覧
-- ram_talker
+### ram_talker
 メモリの使用率を計算し、計算結果をトピックとしてpublishする。
 
-- ram_listener
+### ram_listener
 publishされたメモリ使用率をsubscribeし、30秒毎に通知を行う。
 使用率が80[%]を超過すると通知を行い、80[%]未満に戻った際も通知を行う。
 
