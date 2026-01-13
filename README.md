@@ -1,4 +1,6 @@
 # メモリチェッカー
+![test](https://github.com/kamarakakara/ros2_robosys2025/actions/workflows/test.yml/badge.svg)
+
 ## 概要
 本パッケージはメモリの使用率の通知を行います。通知は起動時、30秒毎、使用率が80[%]を超えたとき、使用率が80[%]を下回った際に行われます。
 
