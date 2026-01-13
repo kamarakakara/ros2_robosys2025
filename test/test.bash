@@ -23,6 +23,7 @@ count=$(tail -n +5 /tmp/ros2_robosys2025.log \
   | grep -E '^\[listener-[0-9]+\][[:space:]]+(0\.[0-9]+|[1-9][0-9]*(\.[0-9]+)?)$' \
   | wc -l)
 
+cat /tmp/ros2_robosys2025.log
 
 if [ "$count" -ge 4 ]; then
   exit 0
