@@ -1,6 +1,6 @@
 # メモリチェッカー
 ## 概要
-本パッケージはメモリの使用率の通知を行います。
+本パッケージはメモリの使用率の通知を行います。通知は起動時、30秒毎、使用率が80[%]を超えたとき、使用率が80[%]を下回った際に行われます。
 
 ## 使用方法
 - launchを用いて一括で起動する方法
@@ -10,7 +10,7 @@ $ ros2 launch ros2_robosys2025 talk_listen.launch.py
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker-1]: process started with pid [218675]
 [INFO] [listener-2]: process started with pid [218677]
-[listener-2] Current usage : 10.46%
+[listener-2] 10.46
 ```
 - 個別に起動する方法
 1. talker
@@ -20,7 +20,7 @@ $ ros2 run ros2_robosys2025 talker
 2. listener
 ```
 $ ros2 run ros2_robosys2025 listener
-Current usage : 10.60%
+10.60
 ```
  
 ## ノード一覧
