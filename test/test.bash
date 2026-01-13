@@ -7,7 +7,7 @@ cd "$dir/ros2_ws" || exit 1
 colcon build || exit 1
 source "$dir/.bashrc"
 
-timeout 10 ros2 launch ros2_robosys2025 talk_listen.launch.py \
+timeout 120 ros2 launch ros2_robosys2025 talk_listen.launch.py \
   > /tmp/ros2_robosys2025.log
 
 tail -n +5 /tmp/ros2_robosys2025.log \
