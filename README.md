@@ -5,15 +5,6 @@
 本パッケージはメモリの使用率の通知を行います。通知は起動時、30秒毎、使用率が80[%]を超えたとき、使用率が80[%]を下回った際に行われます。
 
 ## 使用方法
-- launchを用いて一括で起動する方法
-```
-$ ros2 launch ros2_robosys2025 talk_listen.launch.py
-[INFO] [launch]: All log files can be found below 
-[INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [talker-1]: process started with pid [218675]
-[INFO] [listener-2]: process started with pid [218677]
-[listener-2] 10.46
-```
 - 個別に起動する方法
 1. talker
 ```
@@ -23,6 +14,16 @@ $ ros2 run ros2_robosys2025 talker
 ```
 $ ros2 run ros2_robosys2025 listener
 10.60
+```
+
+- launchを用いて一括で起動する方法
+```
+$ ros2 launch ros2_robosys2025 talk_listen.launch.py
+[INFO] [launch]: All log files can be found below 
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker-1]: process started with pid [218675]
+[INFO] [listener-2]: process started with pid [218677]
+[listener-2] 10.46
 ```
  
 ## ノード一覧
@@ -46,5 +47,5 @@ $ ros2 run ros2_robosys2025 listener
 ## 著作権・ライセンス
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - このパッケージは、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを参考に製作され、本人の許可を得て自身の著作としたものです。
-    - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+    - [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
 - © 2025 kamarakakara
